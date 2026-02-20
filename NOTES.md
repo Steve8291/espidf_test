@@ -16,3 +16,11 @@ git submodule add https://github.com/someweisguy/esp_dmx components/esp_dmx
 
 # Modifications to work on ESP-IDF 5.5.1
 Some headers were moved/renamed between IDF versions. `dmx/hal/include/uart.h` and `dmx/hal/uart.c` had to be modified.
+
+# Fix Squiggly Lines for Linting:
+Add a `.vscode/settings.json` file that contains:
+```c++
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
+}
+```
